@@ -70,9 +70,22 @@ function studio(){
  $('#studio').innerHTML=`<a class="studio-brand" href="index.html">PATH OF DEFENSE<span>DESIGN EXPLORATIONS / 2026</span></a><div class="direction-number">${themes[theme].num}</div><h2>${themes[theme].name}</h2><p class="studio-description">${themes[theme].desc}</p><div class="theme-switch">${Object.entries(themes).map(([k,v])=>`<a class="${k===theme?'selected':''}" href="?theme=${k}#${screen}" data-action="theme:${k}">${v.name}</a>`).join('')}</div><label class="mobile-selector">Экран<select id="screen-select">${Object.entries(screens).map(([k,v])=>`<option value="${k}" ${screen===k?'selected':''}>${v}</option>`).join('')}</select></label><nav class="screen-index">${Object.entries(screens).map(([k,v],i)=>`<button data-action="go:${k}" class="${screen===k?'selected':''}"><span>${String(i+1).padStart(2,'0')}</span>${v}</button>`).join('')}</nav><div class="studio-footer"><p>Интерактивный макет. Бой показан по сценарию; покупки и награды локальные.</p>${button(icon('reset')+'Сбросить демо','reset','studio-reset')}<a href="index.html">Сравнить три направления</a></div>`;
  $('#screen-select')?.addEventListener('change',e=>go(e.target.value));
 }
+let squadPage=0;
+function paginateSquad(){
+ if(!embed||screen!=='squad')return;
+ const grid=$('#device .hero-grid'),cards=[...grid.children],pages=Math.ceil(cards.length/6);
+ if(pages<2)return;
+ squadPage=Math.min(squadPage,pages-1);
+ cards.forEach((card,i)=>card.hidden=Math.floor(i/6)!==squadPage);
+ const pager=document.createElement('div');pager.className='collection-pages';
+ pager.innerHTML=Array.from({length:pages},(_,i)=>`<button class="btn ${i===squadPage?'selected':''}" aria-label="Страница героев ${i+1}" ${i===squadPage?'aria-current="page"':''}>${i+1}</button>`).join('');
+ [...pager.children].forEach((button,i)=>button.addEventListener('click',()=>{squadPage=i;render()}));
+ grid.after(pager);
+}
 function render(){
  clearTimeout(timer); document.body.className=`theme-${theme} ${embed?'embed':''}`;studio();
  $('#device').innerHTML=(views[screen]||campaign)();$('#device').dataset.screen=screen;
+ paginateSquad();
  $('#device').scrollTop=0;$('#device').classList.toggle('no-target',!!state.noTarget&&['battle','boss','pause','upgrade'].includes(screen));
  const modal=$('#device .modal');if(modal){modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.setAttribute('aria-label',screens[screen]);document.querySelectorAll('.battle-hud,.battlefield,.ability-dock').forEach(e=>e.inert=true);}
  if(screen==='loading')timer=setTimeout(()=>go('campaign',true),2200);

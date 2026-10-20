@@ -1,0 +1,52 @@
+/* A shared portrait canvas. Content is laid out inside it, never scrolled. */
+body.embed { min-height:0; }
+body.embed #device { width:405px; max-width:none; height:900px; min-height:900px; border:0; display:flex; flex-direction:column; animation:none; }
+.embed #device > * { flex-shrink:0; }
+.embed #device > .page { min-height:0; }
+.embed #device > .game-nav { margin-top:auto; }
+.embed .battle-screen { height:900px; min-height:900px; display:flex; flex-direction:column; }
+.embed .battlefield { flex:1; height:auto; min-height:0; }
+.embed .connection-screen { height:900px; min-height:900px; }
+.embed .game-header { padding:14px 20px; }
+.embed .hero-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; }
+.embed .hero-art { height:99px; }
+.embed .hero-card-copy { padding:8px; gap:4px; }
+.embed .hero-card-copy strong { font-size:12px; }
+.embed .hero-card-copy .stars .icon { width:13px;height:13px; }
+.embed .hero-card-copy small { font-size:8px; }
+.embed .compact .hero-art { height:80px; }
+.embed .draft { margin:14px 0; }
+.embed .sticky-actions { position:static; margin-top:12px; padding-top:0; display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+.embed .dossier-art { height:240px; }
+.embed .dossier-art > img { height:420px;left:28px; }
+.embed .dossier-body { padding-top:14px!important; }
+.embed .stats { margin:12px 0; padding-bottom:12px; }
+.embed .upgrade-panel { padding:12px; margin:10px 0; }
+.embed .upgrade-panel > .btn { margin-top:10px; }
+.embed .upgrade-panel .section-title { margin-bottom:6px; }
+.embed .shard-row { margin:10px 0; }
+.embed .skill-feature { padding:8px 0; }
+.embed .skill-feature > .ability-emblem { margin-bottom:10px; }
+.embed .skill-feature h2 { margin:8px 0; }
+.embed .skill-feature > p:not(.eyebrow) { margin-bottom:10px;line-height:1.6; }
+.embed .growth { margin:10px 0; }
+.embed .resource-hero { padding:8px 0 16px; }
+.embed .resource-hero > .icon { width:54px;height:54px;margin-bottom:10px; }
+.embed .early-art { height:195px; margin-bottom:12px; }
+.embed .unlock-list { margin:12px 0; }
+.embed .unlock-list > div { padding:10px 0; }
+.embed .campaign-map { gap:7px; margin:12px 0; }
+.embed .campaign-map > button { height:45px; flex-direction:row; }
+.embed .chapter-heading { margin-bottom:12px; }
+.embed .locked-chapter { padding:14px 18px; margin-top:14px; }
+.embed .locked-chapter h2 { margin:6px 0; }
+.embed .locked-chapter > .icon { float:right; }
+.embed .patrol-art { height:180px; }
+.embed .modal { overflow:visible; }
+.embed .modal details { margin:12px 0; }
+.embed .modal details p { margin:8px 0; }
+.embed .modal .pause-stats { margin-bottom:10px;padding:10px 0; }
+.embed.theme-impulse .mission-poster { height:228px; }
+.embed .hero-card[hidden] { display:none; }
+.collection-pages { display:flex;justify-content:center;gap:8px;margin:10px 0; }
+.collection-pages .btn { min-width:44px; }
