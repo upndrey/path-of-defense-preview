@@ -1,0 +1,54 @@
+[
+  {
+    "asset": "tech-edge.webp",
+    "source": "output\\asset-catalog\\extracted\\InterfaceSciFiSoldierHUD\\Sprites\\SciFi\\SPR_SciFi_Frame_AngledTechy01.png"
+  },
+  {
+    "asset": "tech-corner.webp",
+    "source": "output\\asset-catalog\\extracted\\InterfaceSciFiSoldierHUD\\Sprites\\SciFi\\SPR_SciFi_Frame_BottomRight01.png"
+  },
+  {
+    "asset": "coin.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Components\\UI_Etc\\ResourceBar_Demo_Icon_Coin.png"
+  },
+  {
+    "asset": "energy.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Components\\UI_Etc\\ResourceBar_Demo_Icon_Energy.png"
+  },
+  {
+    "asset": "gem.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Components\\UI_Etc\\ResourceBar_Demo_Icon_Gem.png"
+  },
+  {
+    "asset": "poison.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Icon\\SkillIcon01_1.png"
+  },
+  {
+    "asset": "focus.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Icon\\SkillIcon01_2.png"
+  },
+  {
+    "asset": "barrage.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Icon\\SkillIcon01_4.png"
+  },
+  {
+    "asset": "flame.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Icon\\SkillIcon01_5.png"
+  },
+  {
+    "asset": "ice.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Icon\\SkillIcon01_6.png"
+  },
+  {
+    "asset": "pulse.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Icon\\SkillIcon01_7.png"
+  },
+  {
+    "asset": "casual-chest.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Image\\Image_Chest03.png"
+  },
+  {
+    "asset": "casual-chest-open.webp",
+    "source": "output\\asset-catalog\\extracted\\Layer Lab\\GUI Pro-SuperCasual\\ResourcesData\\Sprites\\Demo\\Demo_Image\\Image_Chest04.png"
+  }
+]
